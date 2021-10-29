@@ -1,10 +1,11 @@
 import "./App.css";
+import Toggle from "./components/toggle/Toggle";
 
 function App() {
   return (
-    <>
-      <h1>Hello React App</h1>
-    </>
+    <section className="main">
+      <Toggle />
+    </section>
   );
 }
 
