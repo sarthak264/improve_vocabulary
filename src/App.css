@@ -11,5 +11,12 @@ body {
 }
 .main {
   height: 100vh;
+  padding: 0 5rem;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: whitesmoke;
+  color: #111212;
 }
