@@ -1,0 +1,21 @@
+.list_container {
+  height: 100vh;
+  padding: 6rem 3rem 2rem 3rem;
+}
+.home_btn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+.home_btn i {
+  transition: all 0.2s ease-in-out;
+}
+.home_btn:hover {
+  background: #111212;
+}
+.home_btn:hover i {
+  color: whitesmoke;
+}
+.list_container .title {
+  font-size: 3rem;
+}

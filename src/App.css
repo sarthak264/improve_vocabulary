@@ -9,21 +9,11 @@
 body {
   font-family: "Roboto Mono", monospace;
 }
-.main {
-  height: 100vh;
-  padding: 0 5rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: whitesmoke;
+a {
   color: #111212;
+  text-decoration: none;
 }
-.my_list {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+button {
   padding: 0.5rem 0.75rem;
   background: transparent;
   font-size: 1.25rem;
@@ -34,7 +24,14 @@ body {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.my_list:hover {
-  background: #111212;
-  color: whitesmoke;
+.main {
+  height: 100vh;
+  padding: 0 5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: whitesmoke;
+  color: #111212;
 }
