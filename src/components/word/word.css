@@ -1,7 +1,20 @@
 .word {
   font-size: 7rem;
-  margin-bottom: 1rem;
 }
 .meaning {
   font-size: 2rem;
+}
+.refresh {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  font-size: 2rem;
+  color: #111212;
+  cursor: pointer;
+  transition: all 0s;
+}
+.refresh.rotate {
+  transform: translateX(-50%) rotate(360deg);
+  transition: all 0.4s ease-in-out;
 }
