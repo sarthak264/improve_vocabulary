@@ -22,6 +22,7 @@ const Word = () => {
     <div className="word_container">
       <h1 className="word">{word}</h1>
       <h2 className="definition">{meaning}</h2>
+      <button className="fav_btn">Add to favorites</button>
       <i
         className="fas fa-sync-alt refresh"
         onClick={(e) => {
