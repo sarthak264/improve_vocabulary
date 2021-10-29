@@ -20,3 +20,21 @@ body {
   background-color: whitesmoke;
   color: #111212;
 }
+.my_list {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  font-size: 1.25rem;
+  color: #111212;
+  font-weight: 500;
+  border: 3px solid #111212;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.my_list:hover {
+  background: #111212;
+  color: whitesmoke;
+}
