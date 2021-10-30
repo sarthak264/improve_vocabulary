@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { FavContext } from "../../context/FavContext";
 import "./word.css";
 
 const Word = () => {
+  const { list, setList } = useContext(FavContext);
+
   const [word, setWord] = useState("...");
   const [meaning, setMeaning] = useState("");
 
@@ -13,6 +16,19 @@ const Word = () => {
 
     setWord(data.word);
     setMeaning(data.definition);
+  };
+
+  const addToFav = () => {
+    if (meaning) {
+      const obj = {
+        word: word,
+        definition: meaning,
+      };
+      const newList = [...list, obj];
+      setList(newList);
+    } else {
+      return;
+    }
   };
 
   useEffect(() => {
@@ -27,7 +43,9 @@ const Word = () => {
       <div className="word_container">
         <h1 className="word">{word}</h1>
         <h2 className="definition">{meaning}</h2>
-        <button className="fav_btn">Add to favorites</button>
+        <button className="fav_btn" onClick={addToFav}>
+          Add to favorites
+        </button>
         <i
           className="fas fa-sync-alt refresh"
           onClick={(e) => {
