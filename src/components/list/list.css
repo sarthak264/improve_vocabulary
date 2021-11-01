@@ -16,6 +16,9 @@
 .home_btn:hover i {
   color: whitesmoke;
 }
+.dark .home_btn:hover i {
+  color: #111212;
+}
 .list_container .title {
   font-size: 3rem;
 }

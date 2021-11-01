@@ -51,6 +51,9 @@
   cursor: pointer;
   transition: all 0s;
 }
+.dark .refresh {
+  color: whitesmoke;
+}
 .refresh.rotate {
   transform: translateX(-50%) rotate(360deg);
   transition: all 0.4s ease-in-out;
