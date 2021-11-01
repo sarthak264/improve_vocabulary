@@ -5,6 +5,7 @@ import "./list.css";
 
 const List = () => {
   const { list, setList } = useContext(FavContext);
+  const localList = localStorage.getItem("list");
 
   const deleteWord = (index) => {
     const toBeList = [...list];
@@ -14,7 +15,6 @@ const List = () => {
   };
 
   useEffect(() => {
-    const localList = localStorage.getItem("list");
     if (localList === null) {
       setList([]);
     }
@@ -30,20 +30,21 @@ const List = () => {
         </button>
       </Link>
       <h1 className="title">List</h1>
-      {list.map((obj, index) => {
-        return (
-          <div className="card" key={index}>
-            <i
-              className="fas fa-trash-alt delete"
-              onClick={() => {
-                deleteWord(index);
-              }}
-            ></i>
-            <h1>{obj.word}</h1>
-            <h2>{obj.definition}</h2>
-          </div>
-        );
-      })}
+      {localList &&
+        list.map((obj, index) => {
+          return (
+            <div className="card" key={index}>
+              <i
+                className="fas fa-trash-alt delete"
+                onClick={() => {
+                  deleteWord(index);
+                }}
+              ></i>
+              <h1>{obj.word}</h1>
+              <h2>{obj.definition}</h2>
+            </div>
+          );
+        })}
     </div>
   );
 };

@@ -24,7 +24,12 @@ const Word = () => {
         word: word,
         definition: meaning,
       };
-      const newList = [...list, obj];
+      let newList;
+      if (localStorage.getItem("list") === null) {
+        newList = [obj];
+      } else {
+        newList = [...list, obj];
+      }
       setList(newList);
       localStorage.setItem("list", JSON.stringify(newList));
     } else {
