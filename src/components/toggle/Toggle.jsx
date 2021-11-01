@@ -1,12 +1,27 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { FavContext } from "../../context/FavContext";
 import "./toggle.css";
 
 const Toggle = () => {
+  const checkbox = useRef();
   const { theme, setTheme } = useContext(FavContext);
 
+  const getLocalTheme = () => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme === null) {
+      return;
+    } else if (localTheme === "true") {
+      setTheme(true);
+      checkbox.current.checked = true;
+    }
+  };
+
   useEffect(() => {
-    console.log(theme);
+    getLocalTheme();
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
@@ -15,6 +30,7 @@ const Toggle = () => {
         type="checkbox"
         name="theme"
         id="theme_input"
+        ref={checkbox}
         onClick={() => setTheme(!theme)}
       />
       <label className="label" htmlFor="theme_input">
