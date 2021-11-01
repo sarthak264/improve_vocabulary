@@ -26,6 +26,7 @@ const Word = () => {
       };
       const newList = [...list, obj];
       setList(newList);
+      localStorage.setItem("list", JSON.stringify(newList));
     } else {
       return;
     }
