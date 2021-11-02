@@ -1,5 +1,5 @@
 .list_container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 6rem 0rem 2rem 0rem;
 }
@@ -28,7 +28,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 .delete {
   position: absolute;
@@ -46,4 +46,32 @@
 }
 .dark .delete {
   color: whitesmoke;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card .list_word {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .card .list_def {
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    padding-left: 1rem;
+    text-align: start;
+  }
+  .delete {
+    width: 1.1rem;
+    opacity: 1;
+    left: 90%;
+    top: 35%;
+    transform: translateY(-100%);
+  }
+  .card:hover .delete {
+    opacity: 1;
+  }
 }

@@ -40,8 +40,8 @@ const List = () => {
                   deleteWord(index);
                 }}
               ></i>
-              <h1>{obj.word}</h1>
-              <h2>{obj.definition}</h2>
+              <h1 className="list_word">{obj.word}</h1>
+              <p className="list_def">{obj.definition}</p>
             </div>
           );
         })}

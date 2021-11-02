@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap");
 *,
 *::after,
 *::before {
@@ -34,7 +34,7 @@ button {
   background-color: whitesmoke;
 }
 .main {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 5rem;
   position: relative;
   display: flex;
@@ -48,4 +48,9 @@ button {
 .main.dark {
   background-color: #111212;
   color: whitesmoke;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0 1rem;
+  }
 }
